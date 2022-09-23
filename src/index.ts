@@ -15,6 +15,15 @@ type ChangeResult = {
 const app = express();
 app.use(express.json());
 
+
+app.get('/client/:id', async (req, res) => {
+    const { date } = req.query
+    // sql injection possible - risks accepted
+    const sqlQuery = `select * from Client ${date ? ` FOR SYSTEM_TIME as of '${date}'` : ''} where CID = ${req.params.id}`
+    const result = await sequelize.query(sqlQuery);
+    res.json(result);    
+})
+
 app.post('/change-request', async (req, res) => {
     const { clientId: ClientId, area: ChangeArea } = req.body;
     const cr = await ChangeRequest.create({
@@ -23,14 +32,6 @@ app.post('/change-request', async (req, res) => {
         ChanteRequestPayload: JSON.stringify(req.body),
     })
     res.json(cr);
-})
-
-app.get('/client/:id', async (req, res) => {
-    const { date } = req.query
-    // sql injection possible - risks accepted
-    const sqlQuery = `select * from Client ${date ? ` FOR SYSTEM_TIME as of '${date}'` : ''} where CID = ${req.params.id}`
-    const result = await sequelize.query(sqlQuery);
-    res.json(result);    
 })
 
 app.get('/change-request', async (req, res) => {
