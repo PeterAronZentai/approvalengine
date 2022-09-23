@@ -1,0 +1,11 @@
+{
+    "x-comment": "add new address",
+    "clientId": 2,
+    "area": "address",
+    "changes": [
+        {
+            "field": "Text",
+            "newValue": "Fuubar"
+        }
+    ]
+}

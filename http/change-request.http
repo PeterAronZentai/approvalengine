@@ -1,0 +1,25 @@
+POST http://localhost:4999/change-request
+Content-Type: application/json
+
+{
+    "clientId": 1,
+    "area": "general",
+    "changes": [
+        {
+            "field": "Name",
+            "newValue": "Zeeee Client"
+        },
+        {
+            "field": "ANumericalValue",
+            "newValue": 100
+        },
+        {
+            "field": "RealName",
+            "newValue": "Peter Zee"
+        }
+    ]
+}
+
+
+###
+GET http://localhost:4999/change-request

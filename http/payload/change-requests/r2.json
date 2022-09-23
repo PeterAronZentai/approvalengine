@@ -1,0 +1,14 @@
+{
+    "x-comment": "update address",
+    "clientId": 2,
+    "area": "address",
+    "existingRecord": {
+        "key": 1
+    },
+    "changes": [
+        {
+            "field": "Text",
+            "newValue": "Fuubar"
+        }
+    ]
+}

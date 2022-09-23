@@ -1,0 +1,23 @@
+POST http://localhost:4999/approval-response
+Content-Type: application/json
+
+{
+    "requestId": 12,
+    "changes": [
+        {
+            "field": "Name",
+            "accepted": true
+        },
+        {
+            "field": "ANumericalValue",
+            "accepted": true
+        }
+
+    ]
+}
+
+
+###
+
+
+GET http://localhost:4999/approval-response

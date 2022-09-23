@@ -1,0 +1,18 @@
+{
+    "clientId": 1,
+    "area": "general",
+    "changes": [
+        {
+            "field": "Name",
+            "newValue": "Zeeee Client"
+        },
+        {
+            "field": "ANumericalValue",
+            "newValue": 100
+        },
+        {
+            "field": "RealName",
+            "newValue": "Peter Zee"
+        }
+    ]
+}

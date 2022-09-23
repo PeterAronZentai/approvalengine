@@ -1,0 +1,17 @@
+{
+    "requestId": 6,
+    "changes": [
+        {
+            "field": "Name",
+            "accepted": true
+        },
+        {
+            "field": "ANumericalValue",
+            "accepted": true
+        },
+        {
+            "field": "RealName",
+            "accepted": false
+        }
+    ]
+}

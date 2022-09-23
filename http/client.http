@@ -1,0 +1,7 @@
+
+###
+GET http://localhost:4999/client/1
+
+
+###
+GET http://localhost:4999/client/1?date=2022-09-21 19:10:02.4975986
